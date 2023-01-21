@@ -35,6 +35,24 @@ public class _04_SwitchCase {
         }
         System.out.println("조회 완료 #2");
 
+        // 중고상뭎의 등급에 따른 가격 책정 (1급 최상 4급 최하)
+        int grade = 2; // 등급
+        int price = 7000; // 기본 가격
+        switch (grade){
+            case 1:
+                price += 1000; // price = price + 1000;
+            case 2:
+                price += 1000;
+            case 3:
+                price += 1000;
+                break;
+        }
+        System.out.println(grade + "등급 제품의 가격 : " + price + "원");
+        // 1등급 제품의 가격 : 10000원
+        // 2등급 제품의 가격 : 9000원
+
+        // 여러조건 또는 어떤 범위같은것에 조건을넣을때는 if , else 등을 활용하고 명확한 케이스가 있을때 활용하기 좋다
+
 
     }
 }
