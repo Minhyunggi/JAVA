@@ -35,7 +35,7 @@ public class _04_SwitchCase {
         }
         System.out.println("조회 완료 #2");
 
-        // 중고상뭎의 등급에 따른 가격 책정 (1급 최상 4급 최하)
+        // 중고상품의 등급에 따른 가격 책정 (1급 최상 4급 최하)
         int grade = 2; // 등급
         int price = 7000; // 기본 가격
         switch (grade){
