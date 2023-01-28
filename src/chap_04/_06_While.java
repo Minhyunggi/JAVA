@@ -13,3 +13,5 @@ public class _06_While {
         System.out.println("도착");
     }
 }
+
+ 

@@ -27,5 +27,26 @@ public class _04_MultiArrayLoop {
             }
             System.out.println();
         }
+
+        System.out.println("-------------");
+        // 세로크기 10 x 가로 크기 15에 해당하는 영화관 좌석
+        String[][] seats3 = new String[10][15];
+        String[] eng = {"A","B","C","D","E","F","G","H","I","J"};
+        for (int i = 0; i < seats3.length; i++) { // 세로
+            for (int j = 0; j < seats3[i].length; j++) {
+                seats3[i][j] = eng[i] + (j + 1);
+            }
+        }
+        // 표 구매
+        seats3[7][8] = "__";
+        seats3[7][9] = "___";
+
+        // 영화관 좌석 번호 확인
+        for (int i = 0; i < seats3.length; i++) {
+            for (int j = 0; j < seats3[i].length; j++) { // seats2[1].length = {"B1","B2","B3","B4"} 이므로 seats2[i]를 넣어주면 해결
+                System.out.print(seats3[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
