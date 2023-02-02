@@ -1,10 +1,10 @@
 package chap_07;
 
-public class BlackBoxRefurbish {
-    String modelName; // 모델명
-    String resolution; // 해상도
+public class BlackBoxRefurbish { // 하나의 파일에서 여러 클래스를 만들수있지만 public 이 들어가면 파일명이랑 클래스명이랑 같아야함
+    public String modelName; // 모델명
+    String resolution; // 해상도 , default 값은 앞에 따로 아무것도 안적어주면됨
     private int price; // 가격
-    String color; // 색상
+    protected String color; // 색상
     public String getModelName() {
         return modelName;
     }

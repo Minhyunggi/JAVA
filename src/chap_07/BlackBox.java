@@ -8,7 +8,7 @@ public class BlackBox {
     int serialNumber; // 시리얼 넘버
 
     static int counter = 0; // 시리얼 번호를 생성해주는역할 ++
-    static boolean canAutoReport = false; // 자동 신고 기능 , (static)을 붙이면 클래스변수
+    static boolean canAutoReport = false; // 자동 신고 기능 , (static)을 붙이면 클래스변수 붙지않으면 인스턴스변수
 
     BlackBox() {
 //        System.out.println("기본 생성자 호출");
