@@ -5,7 +5,24 @@ public class BlackBox {
     String resolution;
     int price;
     String color;
+    int serialNumber; // 시리얼 넘버
+
+    static int counter = 0; // 시리얼 번호를 생성해주는 역할 ( 처음엔 0이었다가 ++ 연산을 통해서 값을 증가 )
     static boolean canAutoReport = false; // 스태틱이 붙으면 클래스변수 , 자동신고기능
+
+    BlackBox(){
+        System.out.println("기본 생성자 호출");
+        this.serialNumber = ++counter; // 객체가 생성될때마다 카운터값이올라가고 그게 시리얼넘버임
+        System.out.println("새로운 시리얼넘버를 발급 받았습니다 : " + this.serialNumber);
+    }
+    BlackBox(String modelName , String resolution , int price , String color){
+        this(); // 기본생성자호출 , 이부분은 만약 BlackBox("까망이","FHD",200000,"블랙") 이런식으로 이부분의 생성자를 실행할때 위의 생성자를 선행하고나서 이부분을 실행하는것
+        System.out.println("사용자 정의 생성자 호출");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
+    }
 
     void autoReport() {
         if(canAutoReport) {
