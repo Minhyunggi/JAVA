@@ -47,7 +47,11 @@ public class BlackBox {
     static void callServiceCenter() {
         System.out.println("서비스센터(1588-0000) 로 연결합니다.");
         // 클래스변수와 마찬가지로 클래스메소드도 공통적인 기능이 필요한경우에 사용하면좋음
-        // modelName 같이 객체를 이용해야 만들어지는 인스턴스변수는 static이 들어간 클래스메소드에서 사용불가능
+        // modelName 같이 객체를 이용해야 만들어지는 인스턴스변수는 static 이 들어간 클래스메소드에서 사용불가능
         // canAutoReport 같이 클래스 변수는 여기서 사용하거나 변경이 가능함
+    }
+
+    void appendModelName(String modelName) {
+        this.modelName = this.modelName + modelName; // this 를 붙인 modelName 은 인스턴스변수의 modelName 이고 그냥 modelName 은 파라미터로 들어온 modelName 을 뜻한다. 두가지의 이름이 다른 경우에는 this 가 없어도 상관없다
     }
 }
