@@ -11,17 +11,17 @@ public class BlackBox {
     static boolean canAutoReport = false; // 스태틱이 붙으면 클래스변수 , 자동신고기능
 
     BlackBox(){
-        System.out.println("기본 생성자 호출");
-        this.serialNumber = ++counter; // 객체가 생성될때마다 카운터값이올라가고 그게 시리얼넘버임
-        System.out.println("새로운 시리얼넘버를 발급 받았습니다 : " + this.serialNumber);
+//        System.out.println("기본 생성자 호출");
+//        this.serialNumber = ++counter; // 객체가 생성될때마다 카운터값이올라가고 그게 시리얼넘버임
+//        System.out.println("새로운 시리얼넘버를 발급 받았습니다 : " + this.serialNumber);
     }
     BlackBox(String modelName , String resolution , int price , String color){
-        this(); // 기본생성자호출 , 이부분은 만약 BlackBox("까망이","FHD",200000,"블랙") 이런식으로 이부분의 생성자를 실행할때 위의 생성자를 선행하고나서 이부분을 실행하는것
-        System.out.println("사용자 정의 생성자 호출");
-        this.modelName = modelName;
-        this.resolution = resolution;
-        this.price = price;
-        this.color = color;
+//        this(); // 기본생성자호출 , 이부분은 만약 BlackBox("까망이","FHD",200000,"블랙") 이런식으로 이부분의 생성자를 실행할때 위의 생성자를 선행하고나서 이부분을 실행하는것
+//        System.out.println("사용자 정의 생성자 호출");
+//        this.modelName = modelName;
+//        this.resolution = resolution;
+//        this.price = price;
+//        this.color = color;
     }
 
     void autoReport() {
@@ -70,5 +70,39 @@ public class BlackBox {
 
     void appendModelName(String modelName) {
         this.modelName = this.modelName + modelName; // this 를 붙인 modelName 은 인스턴스변수의 modelName 이고 그냥 modelName 은 파라미터로 들어온 modelName 을 뜻한다. 두가지의 이름이 다른 경우에는 this 가 없어도 상관없다
+    }
+
+    // Getter , Setter
+    String getModelName() {
+        return modelName;
+    }
+    void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    String getResolution() {
+        if (resolution == null || resolution.isEmpty()){
+            return "판매자에게 문의하세요";
+        }
+        return resolution;
+    }
+    void setResolution(String resolution) {
+        this.resolution = resolution;
+    }
+    int getPrice() {
+        return price;
+    }
+    void setPrice(int price) {
+        if (price < 100000) {
+            this.price = 100000;
+        } else {
+            this.price = price;
+        }
+    }
+    String getColor() {
+        return color;
+    }
+    void setColor(String color) {
+        this.color = color;
     }
 }
