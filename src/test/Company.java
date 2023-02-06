@@ -1,11 +1,15 @@
 package test;
 
 class Calculator {
+    public String name;
     public static int Left;
     public static int right;
     public static void sum() {
         System.out.println(Calculator.Left + Calculator.right); // 클래스란 서로 연관되어있는 변수와 메소드를 그룹해주는 역할
                                         // 다른 그룹과 구분해줌 (다른그룹이란 다른 클래스)
+    }
+    Calculator(String name){
+        this.name = name;
     }
 }
 class Employee {
@@ -26,5 +30,8 @@ public class Company {
         Employee.period = 2;
         Employee.right = 5000;
         Employee.sum(2,5000);
+
+        Calculator calculator = new Calculator("김학철");
+        System.out.println(calculator.name);
     }
 }
