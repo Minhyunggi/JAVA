@@ -13,4 +13,9 @@ public class SpeedCam extends Camera {
         // 번호판 인식
         System.out.println("차량 번호를 인식 합니다.");
     }
+
+    @Override // 부모클래스를 오버라이드 하려고할때 annotation 이라는것 , 부모클래스에 오버라이드할것이없으면 에러발생
+    public void showMainFeature() {
+        System.out.println(this.name + " 의 주요 기능 : 속도 측정 , 차량 번호 인식");
+    }
 }
