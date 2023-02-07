@@ -14,7 +14,7 @@ public class _02_Interface {
         normalReporter.report();
         VideoReprter videoReprter = new VideoReprter();
         videoReprter.report();
-        System.out.println("--------------");
+        System.out.println("--------------");  
 
         Detectable fireDetector = new FireDetector();
         fireDetector.detect();
