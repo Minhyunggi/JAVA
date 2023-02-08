@@ -1,5 +1,6 @@
 package chap_09;
 
+import chap_09.coffee.Coffee;
 import chap_09.coffee.CoffeeByName;
 import chap_09.coffee.CoffeeByNickname;
 import chap_09.coffee.CoffeeByNumber;
@@ -26,6 +27,11 @@ public class _02_GenericClass {
         String c4Name = (String)c4.name;
         System.out.println("주문 고객 이름 : " + c4Name);
 
+        System.out.println("---------------");
+        Coffee<Integer> c5 = new Coffee<>(35); // 제네릭 클래스 안에는 대문자로시작하는 Integer , Double 등으로 넣어야한다
+        c5.ready();
 
+        Coffee<String> c6 = new Coffee<>("조세호");
+        c6.ready();
     }
 }

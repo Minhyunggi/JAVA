@@ -18,6 +18,7 @@ public class _01_Generics {
     }
     // <T> 는 타입을 의미함
     // 제네릭스는 여러가지 같은 메소드를 하나로 줄여줄수있음
+    // String Double Integer 등 대문자로시작하는것으로 사용해야한다.
     private static <T> void printAnyArray(T[] array) {
         for (T t :
                 array) {
