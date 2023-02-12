@@ -5,14 +5,14 @@ import chap_08.detector.AdvancedFireDetector;
 import chap_08.detector.Detectable;
 import chap_08.detector.FireDetector;
 import chap_08.repoter.NormalReporter;
-import chap_08.repoter.VideoReprter;
+import chap_08.repoter.VideoReporter;
 
 public class _02_Interface {
     public static void main(String[] args) {
         // 인터페이스
         NormalReporter normalReporter = new NormalReporter();
         normalReporter.report();
-        VideoReprter videoReprter = new VideoReprter();
+        VideoReporter videoReprter = new VideoReporter();
         videoReprter.report();
         System.out.println("--------------");  
 
