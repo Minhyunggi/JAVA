@@ -1,8 +1,6 @@
 package chap_10;
 
-import chap_10.converter.Convertible;
-import chap_10.converter.ConvertibleWithNoParams;
-import chap_10.converter.KRWConverter;
+import chap_10.converter.*;
 
 public class _04_FunctionalInterface {
     public static void main(String[] args) {
@@ -21,6 +19,16 @@ public class _04_FunctionalInterface {
             System.out.println(USD + " 달러 = " + (USD * KRW) + " 원");
         };
         c1.convert();
+
+        // 전달값이 2개인 경우?
+        ConvertibleWithTwoParams c2 = (d,w) -> System.out.println(d + " 달러 = " + (d * w) + " 원");
+        c2.convert(10,1400);
+
+        // 반환값이 있는 경우?
+        ConvertibleWithReturn c3 = (d,w) -> { return d * w; };
+        int result = c3.convert(20, 1400);
+        System.out.println(result);
+
 
     }
     public static void convertUSD(Convertible converter, int USD) {
