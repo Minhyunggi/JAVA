@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class _01_Input {
     public static void main(String[] args) {
         // 사용자 입력
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); // 인풋만들기
         System.out.println("이름을 입력하세요");
         String name = sc.next();
         System.out.println("혈액형을 입력하세요");
