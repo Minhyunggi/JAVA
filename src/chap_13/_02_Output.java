@@ -23,5 +23,23 @@ public class _02_Output {
         System.out.printf("%-6.2f%n", Math.PI);
         System.out.printf("%06.2f%n", Math.PI); // 003.14
 
+        System.out.println("------------문자열-------------");
+        System.out.printf("%s%n", "Java"); // JAVA
+        System.out.printf("%6s%n", "Java"); // __JAVA
+        System.out.printf("%-6s%n", "Java"); // Java__
+        System.out.printf("%6.2s%n", "Java"); // ____Ja ( 6자리 공간 확보후 우측 정렬해서 2글자 출력)
+        System.out.printf("%-6.2s%n", "Java"); // Ja____ ( 6자리 공간 확보후 좌측 정렬해서 2글자 출력)
+
+        System.out.println("------------응용전-------------");
+        System.out.println("이름 영어 수학 평균");
+        System.out.println("강백호 " + 90 + " " + 80 + " " + 85.0); // 강백호 90 80 85.0
+        System.out.println("서태용 " + 100 + " " + 100 + " " + 100.0); //
+        System.out.println("채치수 " + 95 + " " + 100 + " " + 97.5); //
+
+        System.out.println("------------응용후-------------");
+        System.out.println("이름      영어   수학   평균"); // 공백이 각각 6 3 3
+        System.out.printf("%-6s %4d %4d %6.1f%n", "강백호" , 90,80,85.0);
+        System.out.printf("%-6s %4d %4d %6.1f%n", "서태용" , 100,100,100.0);
+        System.out.printf("%-6s %4d %4d %6.1f%n", "채치수" , 95,100,97.5);
     }
 }
